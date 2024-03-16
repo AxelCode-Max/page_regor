@@ -1,0 +1,256 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    background-color: #e7e7e7;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+        header {
+            color: #e7e7e7;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        a {
+            color: #e7e7e7;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Alineación a la izquierda y margen derecho para la primera celda (Inicio de Sesión) */
+        td:first-child {
+            text-align: left;
+            margin-right: auto;
+        }
+
+nav {
+    background-color: #e7e7e7;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    color: #007BFF;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    background-color: #007BFF;
+    color: #e7e7e7;
+}
+
+.container {
+    max-width: 700px auto;
+    min-width: 50px auto;
+    max-height: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e7e7e7;
+}
+
+.product-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.product-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.container1 {
+    max-width: 120px;
+    min-width: 80px auto;
+    max-height: 120px;
+    min-height: 80px auto;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 60px 60px;
+    background-color: #e7e7e7;
+}
+
+.white-rectangle {
+    display: inline-block;
+    padding: 10px;
+    background-color: #e7e7e7;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+}
+
+.container img {
+    max-width: 20%; /* Ajusta el tamaño de la imagen */
+    min-width: 10%;
+}
+.logo2{
+    max-width: 100px; /* Tamaño de la imagen del logo */
+    margin-right: 20px; /* Espacio entre la imagen y los enlaces del menú */
+}
+
+nav {
+    background-color: #e7e7e7;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    color: #007BFF;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    background-color: #007BFF;
+    color: #e7e7e7;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    max-width: 700px;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #e7e7e7;
+}
+
+/* Pantallas medianas (de 601px a 992px de ancho) */
+@media (min-width: 601px) and (max-width: 992px) {
+}
+
+/* Pantallas grandes (a partir de 993px de ancho) */
+@media (min-width: 993px) {
+    /* Agrega aquí los estilos que quieras modificar para pantallas grandes */
+    /* Asegúrate de que el diseño se vea bien en pantallas de escritorio */
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 1000px) {
+    /* Modificamos el tamaño de fuente para pantallas pequeñas */
+    body {
+        font-size: 14px auto;
+    }
+
+    /* Ajustamos el tamaño del logo para pantallas pequeñas */
+    .logo {
+        max-width: 120px;
+        min-width: auto;
+        margin-right: auto;
+    }
+
+    /* Modificamos el espaciado de los enlaces del menú */
+    nav a {
+        padding: 5px;
+    }
+
+    /* Centramos los enlaces del menú verticalmente */
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ajustamos el padding del encabezado para pantallas pequeñas */
+    header {
+        padding: 10px 0;
+    }
+
+    /* Ajustamos el padding del contenido para pantallas pequeñas */
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Estilos específicos para tablets */
+@media (min-width: 800px auto) and (max-width: 990px) {
+    /* Modificamos el tamaño de fuente para pantallas medianas */
+    body {
+        font-size: 16px;
+    }
+}
+
+/* Estilos específicos para pantallas de escritorio */
+@media (min-width: 10px) {
+    /* Modificamos el tamaño de fuente para pantallas grandes */
+    body {
+        font-size: 18px;
+    }
+
+    /* Ajustamos el tamaño del logo para pantallas grandes */
+    .logo {
+        max-width: 120px;
+        min-width: 120px auto;
+        margin-right: 120px auto;
+
+    }
+
+    /* Modificamos el espaciado de los enlaces del menú */
+    nav a {
+        padding: 10px;
+    }
+.tabla {
+    background-color: #e7e7e7;
+    max-width: 680px;
+    min-width: 100px auto;
+    margin: 10px auto;
+    padding: 20px auto;
+    border: 1px solid #e7e7e7;
+    border-radius: 15px;
+}
+
+        body {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            min-height: 70vh;
+            background-image: url(/static/planta.jpg), url(https://media.geeksforgeeks.org/wp-content/uploads/20200828184719/rain-300x300.png);
+            background-size: cover;
+            background-position: center;
+            animation: color-change 10s linear infinite;
+            animation-delay: 1s;
+        }
+        body:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 215%;
+            min-height: 150% auto;
+            background-image: url(https://media.geeksforgeeks.org/wp-content/uploads/20200828184719/rain-300x300.png);
+            animation: rain 0.4s linear infinite;
+            opacity: 0.5; /* Ajusta la opacidad para que la imagen de la lluvia no sea totalmente opaca */
+            pointer-events: none; /* Esto hace que el contenido del pseudo-elemento no sea clickeable */
+        }
+        @keyframes rain {
+            0% {
+                background-position: 0 0;
+                opacity: 1;
+            }
+            100% {
+                background-position: 80% 80%;
+                opacity: 1;
+            }
+        }
+}

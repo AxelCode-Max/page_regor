@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("/static/planta.jpg");
+    background-size: cover;
+}
+
+.container {
+    max-width: 350px;
+    max-height: 750px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #e7e7e7;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00bfff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #007bff;
+}
+body {
+            position: relative;
+            width: 100%;
+            height: 240vh;
+            background-image: url(/static/planta.jpg), url(https://media.geeksforgeeks.org/wp-content/uploads/20200828184719/rain-300x300.png);
+            background-size: cover;
+            background-position: center;
+            animation: color-change 10s linear infinite;
+            animation-delay: 1s;
+        }
+        body:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(https://media.geeksforgeeks.org/wp-content/uploads/20200828184719/rain-300x300.png);
+            animation: rain 0.4s linear infinite;
+            opacity: 0.5; /* Ajusta la opacidad para que la imagen de la lluvia no sea totalmente opaca */
+            pointer-events: none; /* Esto hace que el contenido del pseudo-elemento no sea clickeable */
+        }
+        @keyframes rain {
+            0% {
+                background-position: 0 0;
+                opacity: 1;
+            }
+            100% {
+                background-position: 80% 80%;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center-mt-5 mb-5">PRE-VENTA</h1>
+    </div>
+
+    <div class="container">
+        <div class="row-col-1 row-cols-ms1 row-cols-nd-2 row-cols-lg-2">
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="text-center"></h5>
+                    </div>
+                    <div class="card-body">
+                        <form action="/ventas" method="POST">
+                            <label>Nombre</label>
+                            <input type="text" class="form-control mb-3"  name="name">
+                            <label>Correo</label>
+                            <input type="text" class="form-control mb-3" name="email">
+                            <label>Telefono</label>
+                            <input type="text" class="form-control mb-3" name="phone_number">
+                            <label>Direccion</label>
+                            <input type="text" class="form-control mb-3" name="address">
+                            <label>Codigo Postal</label>
+                            <input type="text" class="form-control mb-3" name="cp">
+                            <button class="btn btn-primary" type="submit">Pre-Venta</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="text-center-mt-5 mb-5">CAMBIOS O CANCELACION</h1>
+    </div>
+
+    <div class="container">
+        <div class="row-col-1 row-cols-ms1 row-cols-nd-2 row-cols-lg-2">
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        {% for ventas in ventas %}
+
+                                    <div class="card-body">
+                                            <form action="/edit/{{ventas.name}}" method="POST">
+                                                <div class="card-header">
+                                                    <h5 class="text-center">“Una vez que haya realizado los cambios necesarios, haga clic en el botón Editar Cambios.”</h5>
+                                                </div>
+                                                <small>Nombre</small>
+                                                <input type="text" class="form-control" value="{{ventas.name}}" name="name">
+                                                <small>Correo</small>
+                                                <input type="text" class="form-control" value="{{ventas.email}}" name="email">
+                                                <small>Telefono</small>
+                                                <input type="text" class="form-control" value="{{ventas.phone_number}}" name="phone_number">
+                                                <small>Direccion</small>
+                                                <input type="text" class="form-control" value="{{ventas.address}}" name="address">
+                                                <small>Codigo Postal</small>
+                                                <input type="text" class="form-control" value="{{ventas.cp}}" name="cp">
+                                                <button class="btm btn-primary btn-sn" type="submit">Editar Cambios</button>
+                                                <div class="card-header">
+                                                    <h5 class="text-center">¿desea cancelar el pedido?</h5>
+                                                </div>
+                                                <a href="{{url_for('delete', ventas_name=ventas.name)}}" class="btm btn-danger btn-sm">Eliminar</a>
+                                            </form>
+                                    </div>
+
+                                {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

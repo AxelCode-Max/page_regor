@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto - Regor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+<header>
+    <div class="container1">
+    <img src="{{url_for('static', filename='regorlogo.png') }}" alt="Funda" class="logo">
+    </div>
+    </nav>
+    <div class="tabla">        
+        <table>
+            <tr>
+                <td><a href="#1"><span style="color: deepskyblue;">Que es?</span></a></td>
+                <td><a href="#2"><span style="color: deepskyblue;">Propósito</span></a></td>
+                <td><a href="#3"><span style="color: deepskyblue;">Aplicación movil</span></a></td>
+                <td><a href="#4"><span style="color: deepskyblue;">Contactos</span></a></td>
+                <td><a href="{{url_for('ventas')}}"><span style="color: deepskyblue;">Preventa</span></a></td>
+            </tr>
+        </table>
+    </div>
+</header>
+<main>
+
+    <section id="1" class="product-section">
+        <div class="container">
+            <h2 class="section-title"><span style="color: deepskyblue;">¿Qué es Regor?</span></h2>
+            <div class="product-description">
+                <p>
+                    Es un sistema de riego inteligente impulsado por energía solar, diseñado para mejorar la eficiencia del riego y reducir los costos de energía. Con el uso de sensores de humedad, regula la cantidad de agua suministrada a las plantas, mientras que los paneles solares generan la energía necesaria. A través de una página web o una aplicación móvil, los usuarios pueden monitorear y ajustar el sistema en tiempo real, facilitando un control remoto eficiente. Además, proporciona la capacidad de revisar el historial de riego, recibir alertas y acceder a los servicios de manera conveniente desde dispositivos móviles.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="2" class="product-section">
+        <div class="container">
+            <h2 class="section-title"><span style="color: deepskyblue;">Propósito de Solar Hydro</span></h2>
+            <div class="product-description">
+                <p>
+                    Es proporcionar un sistema de riego inteligente y sostenible que optimiza el uso del agua y reduce los costos de energía. Mediante el uso de energía solar y sensores de humedad, el sistema permite un control remoto eficiente del riego. Tanto la página web como la aplicación móvil permiten a los usuarios monitorear y ajustar el sistema en tiempo real, visualizar el historial de riego y recibir alertas. Además, la aplicación móvil ofrece la comodidad de acceder a estos servicios sin necesidad de una computadora.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="3" class="product-section">
+        <div class="container">
+            <h2 class="section-title"><span style="color: deepskyblue;">Aplicación móvil</span></h2>
+            <div class="app-features">
+                <ul>
+                    <li><span style="color: deepskyblue;">Notificaciones:</span> Agregaremos notificaciones en la aplicación móvil para alertarte cuando el sistema de riego se active o cuando haya algún problema con el sistema.</li>
+                    <li><span style="color: deepskyblue;">Mostrar datos en tiempo real:</span> Mostrará los datos de humedad del suelo, la cantidad de agua suministrada y otros datos relevantes en tiempo real en la aplicación móvil. Esto permitiría monitorear el sistema de riego y ajustar la configuración según sea necesario.</li>
+                    <li><span style="color: deepskyblue;">Control remoto:</span> Es una función de control remoto en la aplicación móvil para activar o desactivar el sistema de riego desde cualquier lugar.</li>
+                    <li><span style="color: deepskyblue;">Historial de riego:</span> Mostrará un historial de riego en la aplicación móvil para que puedas ver cuántas veces se ha activado el sistema de riego y cuánta agua se ha suministrado a las plantas.</li>
+                    <li><span style="color: deepskyblue;">Información de contacto:</span> Agregaremos información de contacto en la aplicación móvil para que los usuarios puedan comunicarse con nosotros si tienen alguna pregunta o problema.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="4" class="product-section">
+        <div  class="container">
+            <h2 class="section-title"><span style="color: deepskyblue;">Contacto</span></h2>
+            <ul>
+                <li><span style="color: deepskyblue;">Teléfono:</span> 812-593-3289</li>
+                <li><span style="color: deepskyblue;">Correo Electrónico:</span> info@regor.com</li>
+                <li><span style="color: deepskyblue;">Horario de Atención:</span> Lunes a Viernes, 7:30 AM - 3:00 PM</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="container">
+        <img src="{{url_for('static', filename='regorlogo.png') }}" alt="Funda" class="logo">
+        <h6><p>© 2024 Regor. Todos los derechos reservados.</p></h6>
+    </div>
+</section>
+
+</main>
+</body>
+</html>
